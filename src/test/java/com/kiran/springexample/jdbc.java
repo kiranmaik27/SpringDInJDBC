@@ -1,8 +1,6 @@
 package com.kiran.springexample;
 
-import com.kiran.jdbc.Person;
-import com.kiran.jdbc.PersonNamedParameterService;
-import com.kiran.jdbc.PersonService;
+import com.kiran.jdbc.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +18,7 @@ import org.springframework.util.Assert;
 @ContextConfiguration(locations = {"/springjdbc.xml"})
 public class  jdbc {
 
-    @Autowired
+    /*@Autowired
     private PersonService personService;
 
     @Autowired
@@ -36,7 +34,35 @@ public class  jdbc {
 
     @Test
     public void getbyIDNamedParameter(){
-        Person p = personNamedParameterService.getPerson(1L);
+        Person p = personNamedParameterService.getPerson(2L);
         System.out.println(p.getFirstname());
+    }*/
+
+   /* @Autowired
+    private PersonServiceInsert PersonServiceInsert;
+
+    @Test
+    public void setbyId(){
+        PersonServiceInsert.setPerson();
+        System.out.println("1 rec inserted");
+        //Assert.notNull(name);
+    }*/
+   /*@Autowired
+   private PersonServiceUpdate PersonServiceUpdate;
+
+    @Test
+    public void setbyId(){
+        PersonServiceUpdate.setPerson();
+        System.out.println("1 rec updated");
+        //Assert.notNull(name);
+    }*/
+   @Autowired
+   private PersonServiceDelete PersonServiceDelete;
+
+    @Test
+    public void setPersonServiceDelete(){
+        PersonServiceDelete.deletePerson();
+        System.out.println("1 rec deleted");
+        //Assert.notNull(name);
     }
 }

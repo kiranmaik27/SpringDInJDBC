@@ -19,4 +19,16 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
+    <bean id="personNamedServiceIns" class="com.kiran.jdbc.PersonServiceInsert">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="personNamedServiceUpd" class="com.kiran.jdbc.PersonServiceUpdate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id = "personNamedServiceDel" class="com.kiran.jdbc.PersonServiceDelete">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
 </beans>

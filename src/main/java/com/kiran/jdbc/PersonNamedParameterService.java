@@ -11,11 +11,10 @@ import java.util.Map;
 public class PersonNamedParameterService extends NamedParameterJdbcDaoSupport {
 
     public Person getPerson(Long id) {
+        String SQL = "select id as id, first_name as firstname from Person where id=:id";
 
         Map<String, Object> paramMap = new HashMap<String, Object>();
         paramMap.put("id", id);
-
-        String SQL = "select Id as id, first_name as firstname from Person where id=:Id";
 
         Person person = getNamedParameterJdbcTemplate().queryForObject
                 (SQL, paramMap, new PersonRowMapper());

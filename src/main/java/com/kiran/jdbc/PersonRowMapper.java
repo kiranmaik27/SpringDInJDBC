@@ -10,7 +10,7 @@ import java.sql.SQLException;
  */
 public class PersonRowMapper implements RowMapper<Person> {
 
-    public Person mapRow(ResultSet rs, int rowNum) throws SQLException{
+        public Person mapRow(ResultSet rs, int rowNum) throws SQLException{
         Person p = new Person();
         p.setFirstname(rs.getString("firstname"));
         p.setId(rs.getLong("id"));

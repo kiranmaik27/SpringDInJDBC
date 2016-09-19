@@ -1,10 +1,9 @@
-package com.kiran.jdbc;
+package com.mybatis;
 
 /**
- * Created by aditya on 9/16/2016.
+ * Created by aditya on 9/19/2016.
  */
 public class Person {
-
     private Long id;
     private String firstname;
 
@@ -23,5 +22,4 @@ public class Person {
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
-
 }
